@@ -1,56 +1,65 @@
 Algoritmo "Valor_Passagem_Michele_Turismo"
-// Descrição   : Calcula o valor a ser cobrado em cada tipo de passeio
+// DescriÃ§Ã£o   : Calcula o valor a ser cobrado em cada tipo de passeio
 // Autor(a)    : Alexandre Dimas Santos Reis
 // Data atual  : 23/10/2021
 Var
-// Seção de Declarações das variáveis 
-viagem, onibus, lucro, kit, vguia, guialocal, nguia, diaria: inteiro
+// SeÃ§Ã£o de DeclaraÃ§Ãµes das variÃ¡veis 
+x, viagem, onibus, lucro, kit, vguia, guialocal, nguia, diaria: inteiro
 ticket, ticket1, ticket2, hotel, taxa: real
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc...
+// SeÃ§Ã£o de Comandos, procedimento, funÃ§Ãµes, operadores, etc...
 
 kit <-5
 lucro<-30
 
-   escreval("MICHELE TURISMO - CALCULO DE PASSAGEM")
-      escreval("")
-      escreval(" 1 - Bate e Volta")
-      escreval(" 2 - Excursão")
-      escreval("Digite o número correspondente ao tipo de Viagem: ")
-      
    repita
-      leia(viagem)
-   ate (viagem = 1) ou (viagem = 2)
-   
-   escreva("Qual o valor do ônibus?")
-   leia(onibus)
-   escreva("Numero de Guias da Michele: ")
-   leia(nguia)
-   escreva("Qual o valor total a ser pago por guia ?")
-   leia(vguia)
 
-   se viagem = 1 entao
-      ticket1<-(kit+(nguia * vguia +onibus)/32)
-      escreval()
-      escreval("O Custo por passagem é: R$", ticket1)
-      ticket1<- ticket1 + (ticket1 * lucro/100)
-      escreval("O Valor a ser cobrado por passagem é: R$",ticket1)
-      
-      senao
-           escreva("Digite o valor da taxa da cidade: ")
-           leia(taxa)
-           escreva("Digite o valor total do guia local: ")
-           leia(guialocal)
-           escreva("Digite o valor da Diária P/ Pessoa no Hotel: ")
-           leia(hotel)
-           escreva("Digite o número de diárias: ")
-           leia(diaria)
-           
-           ticket2 <- kit+(hotel*diaria)+(nguia*vguia+onibus+taxa+guialocal)/32
-           escreval()
-           escreval("O Custo por passagem é: R$", ticket2)
-           ticket2<- ticket2+(ticket2* lucro/100)
-           escreval("O Valor a ser cobrado por passagem é: R$",ticket2)
-   fimse
+      escreval("MICHELE TURISMO - CALCULO DE PASSAGEM")
+         escreval("")
+         escreval(" 1 - Bate e Volta")
+         escreval(" 2 - ExcursÃ£o")
+         escreva("Digite o nÃºmero correspondente ao tipo de Viagem: ")
+
+      repita
+         leia(viagem)
+      ate (viagem = 1) ou (viagem = 2)
+      escreva("")
+      escreva("Digite o valor do Ã´nibus: ")
+      leia(onibus)
+      escreva("Numero de Guias da Michele: ")
+      leia(nguia)
+      escreva("Digite o valor total a ser pago por guia: ")
+      leia(vguia)
+
+      se viagem = 1 entao
+         ticket1<-(kit+(nguia * vguia +onibus)/32)
+         escreval()
+         escreval("O Custo por passagem Ã©: R$", ticket1)
+         ticket1<- ticket1 + (ticket1 * lucro/100)
+         escreval("O Valor a ser cobrado por passagem Ã©: R$",ticket1)
+
+         senao
+              escreva("Digite o valor da taxa da cidade: ")
+              leia(taxa)
+              escreva("Digite o valor total do guia local: ")
+              leia(guialocal)
+              escreva("Digite o valor da DiÃ¡ria P/ Pessoa no Hotel: ")
+              leia(hotel)
+              escreva("Digite o nÃºmero de diÃ¡rias: ")
+              leia(diaria)
+
+              ticket2 <- kit+(hotel*diaria)+(nguia*vguia+onibus+taxa+guialocal)/32
+              escreval("")
+              escreval("O Custo por passagem Ã©: R$", ticket2)
+              ticket2<- ticket2+(ticket2* lucro/100)
+              escreval("O Valor a ser cobrado por passagem Ã©: R$",ticket2)
+              escreva("")
+      fimse
+   escreva("")
+   escreval("REINICIAR: 1 ")
+   escreval("SAIR DIGITE QUALQUER TECLA: ")
+   leia(x)
+   ate x<>1
+   
 Fimalgoritmo
